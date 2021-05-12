@@ -1,0 +1,128 @@
+{
+  "extends": [
+    "airbnb",
+    "react-app",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "camelcase": "warn",
+    "class-methods-use-this": "warn",
+    "consistent-return": "off",
+    "dot-notation": "warn",
+    "import/extensions": "off",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "import/no-extraneous-dependencies": [
+      "warn",
+      { "devDependencies": ["**/src/*.test.js"] }
+    ],
+    "import/no-named-as-default": "warn",
+    "import/no-unresolved": "warn",
+    "import/order": "warn",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/mouse-events-have-key-events": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "no-await-in-loop": "off",
+    "no-bitwise": "off",
+    "no-case-declarations": "off",
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-else-return": "warn",
+    "no-empty": "warn",
+    "no-extra-boolean-cast": "off",
+    "no-lonely-if": "warn",
+    "no-nested-ternary": "warn",
+    "no-param-reassign": [
+      "warn",
+      { "props": true, "ignorePropertyModificationsFor": ["draft"] }
+    ],
+    "no-plusplus": "off",
+    "no-prototype-builtins": "off",
+    "no-return-assign": "warn",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "no-unneeded-ternary": "warn",
+    "object-shorthand": "warn",
+    "prefer-const": "warn",
+    "prefer-destructuring": "warn",
+    "prefer-rest-params": "off",
+    "prefer-template": "warn",
+    "prettier/prettier": "warn",
+    "radix": "error",
+    "react/default-props-match-prop-types": "warn",
+    "react/destructuring-assignment": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-boolean-value": "off",
+    "react/jsx-closing-bracket-location": "warn",
+    "react/jsx-closing-tag-location": "warn",
+    "react/jsx-curly-brace-presence": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-tag-spacing": "warn",
+    "react/jsx-wrap-multilines": "off",
+    "react/no-access-state-in-setstate": "off",
+    "react/no-array-index-key": "warn",
+    "react/no-children-prop": "warn",
+    "react/no-did-update-set-state": "off",
+    "react/no-multi-comp": "off",
+    "react/no-typos": "warn",
+    "react/no-unescaped-entities": "warn",
+    "react/no-unused-prop-types": "warn",
+    "react/no-unused-state": "error",
+    "react/no-will-update-set-state": "warn",
+    "react/prefer-stateless-function": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/sort-comp": "off",
+    "spaced-comment": "warn",
+    "prefer-object-spread": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-fragments": "off",
+    "react/state-in-constructor": "off",
+    "react/jsx-curly-newline": "off",
+    "max-classes-per-file": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-use-before-define": "off", //https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
+    "@typescript-eslint/no-use-before-define": ["warn"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "React",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": ["warn"],
+    "@typescript-eslint/ban-ts-comment": ["warn"],
+    "@typescript-eslint/ban-types": ["warn"],
+    "@typescript-eslint/no-inferrable-types": ["warn"]
+  },
+  "overrides": [
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": ["warn"]
+      }
+    }
+  ]
+}
